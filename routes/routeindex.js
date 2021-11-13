@@ -1,11 +1,12 @@
 const { render } = require('ejs');
 const express = require('express');
 const router = express.Router();
-//const Task = require('../model/task');
+const Post = require('../model/post');
 
 
 router.get('/', async function(req,res){
-  res.render('index');
+  var posts = await Post.find()
+  res.render('index',{posts});
 });
 
 

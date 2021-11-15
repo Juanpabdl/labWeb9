@@ -42,6 +42,7 @@ router.get('/delete/:id', async (req,res) =>{
 
 router.post('/delete/:id',  async (req,res) =>{
   var id = req.params.id
+  console.log(req.params)
   await Post.remove({_id: id})
   res.redirect('/')
 })

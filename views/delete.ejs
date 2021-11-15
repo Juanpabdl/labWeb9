@@ -5,7 +5,7 @@
     <div class="row">
       <div class="col-md-8 blog-main">
         <h1>¿Seguro que desea eliminar este post?</h1>
-        <form action="/edit/<%= post._id %>" method="POST">
+        <form action="/delete/<%= post._id %>" method="POST">
           <div class="form-group">
             <input type="text" class="form-control" name="title" placeholder="Title" value="<%= post.title %>" disabled>
           </div>
@@ -17,7 +17,7 @@
               <%= post.post_data %>
             </textarea>
           </div>
-          <button type="submit" class="btn btn-primary">Delete</button>
+          <button type="submit" class="btn btn-primary">Eliminar</button>
         </form>
       </div>
     </div>
